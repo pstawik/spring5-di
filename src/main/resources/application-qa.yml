@@ -1,0 +1,4 @@
+pstawik:
+  username: YMLqasuperuser
+  password: YMLqadbPassword
+  jdbcurl: YMLqasomeUrlForDB

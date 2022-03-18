@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    active: EN, qa
+pstawik:
+  username: YMLsuperuser
+  password: YMLdbPassword
+  jdbcurl: YMLsomeUrlForDB
