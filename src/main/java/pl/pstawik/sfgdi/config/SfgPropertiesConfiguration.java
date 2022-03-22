@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @ConfigurationProperties("pstawik")
 @Configuration
-public class SfgConfiguration {
+public class SfgPropertiesConfiguration {
     private String username;
     private String password;
     private String jdbcurl;

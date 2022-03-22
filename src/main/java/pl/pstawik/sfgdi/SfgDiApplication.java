@@ -4,7 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import pl.pstawik.sfgdi.config.FakeDataSource;
-import pl.pstawik.sfgdi.config.SfgConfiguration;
+import pl.pstawik.sfgdi.config.SfgConstructorConfiguration;
+import pl.pstawik.sfgdi.config.SfgPropertiesConfiguration;
 import pl.pstawik.sfgdi.controllers.*;
 
 @SpringBootApplication
@@ -39,9 +40,16 @@ public class SfgDiApplication {
 		System.out.println(fakeDataSource.getJdbcurl());
 
 		System.out.println(" ---- Config props bean");
-		SfgConfiguration sfgConfiguration = ctx.getBean(SfgConfiguration.class);
-		System.out.println(sfgConfiguration.getUsername());
-		System.out.println(sfgConfiguration.getPassword());
-		System.out.println(sfgConfiguration.getJdbcurl());
+		SfgPropertiesConfiguration sfgPropertiesConfiguration = ctx.getBean(SfgPropertiesConfiguration.class);
+		System.out.println(sfgPropertiesConfiguration.getUsername());
+		System.out.println(sfgPropertiesConfiguration.getPassword());
+		System.out.println(sfgPropertiesConfiguration.getJdbcurl());
+
+		System.out.println(" ---- Constructor Binding");
+		SfgConstructorConfiguration sfgConstructorConfiguration = ctx.getBean(SfgConstructorConfiguration.class);
+		System.out.println(sfgConstructorConfiguration.getUsername());
+		System.out.println(sfgConstructorConfiguration.getPassword());
+		System.out.println(sfgConstructorConfiguration.getJdbcurl());
+
 	}
 }
