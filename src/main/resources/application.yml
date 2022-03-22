@@ -1,7 +1,24 @@
 spring:
   profiles:
-    active: EN, qa
+    active:
+      - EN
+      - dev
 pstawik:
   username: YMLsuperuser
   password: YMLdbPassword
   jdbcurl: YMLsomeUrlForDB
+
+---
+spring:
+  profiles: prod
+pstawik:
+    username: YMLprodsuperuser
+    password: YMLproddbPassword
+    jdbcurl: YMLprodsomeUrlForDB
+---
+spring:
+  profiles: abc
+pstawik:
+  username: YMLabcsuperuser
+  password: YMLabcdbPassword
+  jdbcurl: YMLabcsomeUrlForDB
